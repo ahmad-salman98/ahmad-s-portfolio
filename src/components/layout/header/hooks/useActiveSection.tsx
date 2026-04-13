@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export function useActiveSection(sectionIds: string[]) {
     const [activeSection, setActiveSection] = useState("home");
-
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -12,7 +11,7 @@ export function useActiveSection(sectionIds: string[]) {
                     }
                 });
             },
-            { rootMargin: "-20% 0px -80% 0px" }
+            { rootMargin: "-40% 0px -60% 0px" }
         );
 
         sectionIds.forEach((id) => {
