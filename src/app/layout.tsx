@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+const lufga = localFont({
+    src: [
+        {
+            path: "../../public/fonts/Lufga-Light.woff2",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/Lufga-Regular.woff2",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/Lufga-Medium.woff2", // the "bold" file
+            weight: "600", // Using 600 (Semi-Bold) makes it punchy
+            style: "normal",
+        },
+    ],
+    variable: "--font-lufga",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +38,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col`}
+                className={`${lufga.variable} font-lufga min-h-screen flex flex-col`}
             >
                 <Header />
                 <main className="flex-1">
