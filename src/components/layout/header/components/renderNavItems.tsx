@@ -12,7 +12,7 @@ interface RenderNavItemsProps {
 export default function RenderNavItems({ isMobile, isOpen = false }: RenderNavItemsProps) {
     const activeSection = useActiveSection(SECTION_IDS);
     const navMobileClasses = `overflow-hidden transition-all duration-300 flex-col gap-4 ${isOpen ? 'max-h-screen mt-8' : 'max-h-0'}`
-    const navDesktopClasses = `hidden md:flex justify-between w-full gap-16 container mx-auto`
+    const navDesktopClasses = `hidden justify-between w-full gap-16 container mx-auto md:flex`
 
     return (
         <nav className={`flex  ${isMobile ? navMobileClasses : navDesktopClasses}`}>
