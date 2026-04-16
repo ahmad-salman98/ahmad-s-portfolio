@@ -21,10 +21,11 @@ export default function Services() {
             </div>
 
             {/* cards */}
-            <div className="container flex flex-col items-center justify-center gap-8 mt-20 lg:flex-row lg:justify-between ">
+            <div className="container flex flex-col items-center justify-between mt-20 lg:flex-row lg:justify-between ">
                 <Card title="Accessibility" imgSrc="/images/services/accessibility.png" link="#" />
-                <Card  imgSrc="/images/services/performance.png" link="#" />
-                <Card  imgSrc="/images/services/seo.png" link="#" />
+                <Card title="Performance" imgSrc="/images/services/performance.png" link="#" />
+                <Card title="SEO" imgSrc="/images/services/seo.png" link="#" />
+                <Card title="Scalability" imgSrc="/images/services/scalability.png" link="#" />
             </div>
         </section>
     )
