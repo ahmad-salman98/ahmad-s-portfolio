@@ -1,8 +1,22 @@
 import Image from "next/image";
 import Leafs from "./components/leafs";
 import Card from "@/components/card/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Services() {
+    const servicesData = [
+        { title: "Accessibility", imgSrc: "/images/services/accessibility.png", link: "#" },
+        { title: "Performance", imgSrc: "/images/services/performance.png", link: "#" },
+        { title: "SEO", imgSrc: "/images/services/seo.png", link: "#" },
+        { title: "Scalability", imgSrc: "/images/services/scalability.png", link: "#" },
+    ];
+
     return (
         <section className="relative rounded-[38px] overflow-hidden py-20 lg:pt-25">
             {/* background color & image */}
@@ -21,12 +35,32 @@ export default function Services() {
             </div>
 
             {/* cards */}
-            <div className="container flex flex-col items-center justify-between mt-20 lg:flex-row lg:justify-between ">
-                <Card title="Accessibility" imgSrc="/images/services/accessibility.png" link="#" />
-                <Card title="Performance" imgSrc="/images/services/performance.png" link="#" />
-                <Card title="SEO" imgSrc="/images/services/seo.png" link="#" />
-                <Card title="Scalability" imgSrc="/images/services/scalability.png" link="#" />
-            </div>
-        </section>
+
+            <Carousel
+                opts={{
+                    align: "start",
+                    loop: false,
+                }}
+                className="container mt-20"
+            >
+                <CarouselContent
+                    className="-ml-4"
+                    viewportClassName="px-2 sm:px-3"
+                >
+                    {servicesData.map((service, index) => (
+                        <CarouselItem
+                            key={index}
+                            className="pl-4 basis-[90%] sm:basis-[70%] md:basis-[44.44%] lg:basis-1/3 flex justify-center"
+                        >
+                            <Card title={service.title} imgSrc={service.imgSrc} link={service.link} />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+
+                {/* أسهم التقليب (خليتها تظهر بس على الشاشات الأكبر من موبايل، الموبايل سحب باللمس) */}
+                <CarouselPrevious className="hidden bg-[#1D2939] text-white border-none hover:bg-primary md:flex scale-150 cursor-pointer" />
+                <CarouselNext className="hidden bg-[#1D2939] text-white border-none hover:bg-primary md:flex scale-150 cursor-pointer" />
+            </Carousel>
+        </section >
     )
 }
