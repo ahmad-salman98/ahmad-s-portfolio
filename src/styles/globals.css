@@ -7,3 +7,11 @@
     --color-santas-gray: #98A2B3;
     --font-lufga: var(--font-lufga);
 }
+
+.container {
+    max-width: 1350px;
+    @apply mx-auto;
+    @apply px-4;
+    @apply sm:px-6;
+    @apply lg:px-8;
+}

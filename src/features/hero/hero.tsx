@@ -16,7 +16,7 @@ export default function Hero() {
                 <Image src="/icons/three-xl.svg" alt="three" width={74} height={85} className="absolute bottom-[-55px] left-[-55px] scale-50 md:bottom-[-70px] md:left-[-70px] md:scale-100" />
             </div>
             {/* quote */}
-            <div className="container flex flex-col items-center gap-16 mt-20 px-4 w-full sm:flex-row sm:mt-20 sm:justify-between md:mt-40 lg:absolute lg:top-1/4">
+            <div className="container flex flex-col items-center gap-16 mt-20 w-full sm:flex-row sm:mt-20 sm:justify-between md:mt-40 lg:absolute lg:top-1/3">
                 <div className="flex flex-col max-w-[340px]">
                     <span className="text-4xl leading-none h-6 md:text-6xl md:h-10">
                         &ldquo;
