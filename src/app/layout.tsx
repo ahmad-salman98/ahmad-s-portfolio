@@ -3,6 +3,10 @@ import "../styles/globals.css";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer";
 import localFont from "next/font/local";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const lufga = localFont({
     src: [
@@ -41,7 +45,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="scroll-smooth">
+        <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
             <body
                 className={`${lufga.variable} font-lufga min-h-screen flex flex-col`}
             >

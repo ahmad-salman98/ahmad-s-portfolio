@@ -7,7 +7,7 @@ export default function Hero() {
             {/* hello */}
             <div className="relative mt-10">
                 <Image src="/icons/three.svg" alt="three" width={32} height={33} className="w-8 h-8 absolute top-[-32px] right-[-22px]" />
-                <span className="px-8 py-2 rounded-full border text-xl font-bold ">Hello</span>
+                <span className="px-8 py-2 rounded-full border border-secondary text-xl font-bold ">Hello</span>
             </div>
             {/* name */}
             <div className="mt-8 text-center relative md:mb-[-50px]">
