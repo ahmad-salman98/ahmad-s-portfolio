@@ -1,9 +1,11 @@
 import Hero from "@/features/hero/hero";
+import Services from "@/features/services/services";
 
 export default function Home() {
   return (
-    <div className="container pt-[100px] mx-auto">
+    <div className="pt-[100px]">
       <Hero />
+      <Services />
     </div>
   );
 }

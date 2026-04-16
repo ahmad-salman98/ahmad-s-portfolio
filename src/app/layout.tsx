@@ -21,6 +21,11 @@ const lufga = localFont({
             weight: "600", // Using 600 (Semi-Bold) makes it punchy
             style: "normal",
         },
+        {
+            path: "../../public/fonts/Lufga-Bold.woff2",
+            weight: "700",
+            style: "normal",
+        }
     ],
     variable: "--font-lufga",
 });
