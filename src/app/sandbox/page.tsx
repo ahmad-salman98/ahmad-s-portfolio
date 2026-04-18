@@ -1,9 +1,9 @@
-import Services from "@/features/services/services";
+import Experience from "@/features/experience/experience";
 
-export default function TestPage() {
+export default function SandboxPage() {
     return (
         <div className="container pt-[100px]">
-            <Services/>
+            <Experience />
         </div>
     );
 }
