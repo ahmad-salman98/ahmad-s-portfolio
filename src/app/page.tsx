@@ -1,6 +1,7 @@
 import Experience from "@/features/experience/experience";
 import Hero from "@/features/hero/hero";
 import Services from "@/features/services/services";
+import Testimonials from "@/features/testamonials/testimonials";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Services  />
       <Experience />
+      <Testimonials className="mt-10"/>
     </div>
   );
 }
